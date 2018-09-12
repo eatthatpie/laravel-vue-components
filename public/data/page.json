@@ -1,0 +1,29 @@
+[
+    {
+        "component": "content",
+        "props": {
+            "body": "<h1>Saliqua consectetur amet minim</h1><p>Sit aliqua ad culpa nisi proident esse laboris. Ad reprehenderit voluptate cupidatat labore in minim ipsum veniam esse quis. Lorem occaecat dolor incididunt in pariatur. Dolor culpa quis sint cupidatat esse non excepteur nisi non exercitation.</p><p>Lorem et magna commodo et. Dolor minim voluptate cillum ut eiusmod excepteur id labore cupidatat enim minim. Sit fugiat officia ad quis Lorem. Velit minim ad Lorem dolore elit in minim ex nostrud ut.</p><p>Velit nisi elit esse id sit laborum veniam deserunt aliqua do tempor. Ad velit ad ad esse sunt consequat culpa irure laborum duis. In labore proident velit pariatur velit eiusmod sint ea consequat velit tempor. Voluptate adipisicing dolor ut voluptate magna commodo dolore. Magna aliquip labore laborum reprehenderit aute sint et proident anim adipisicing eu dolor excepteur pariatur. Ex id ea irure eu elit sunt. Sit aute ullamco irure veniam sunt fugiat esse aliquip.</p>"
+        }
+    },
+    {
+        "component": "card",
+        "props": {
+            "image": "/images/example/1.jpg",
+            "alt": "eu nulla esse ex aliquip minim",
+            "body": "<p>Lorem elit officia mollit sunt sunt incididunt ullamco. Reprehenderit duis est quis quis qui amet eu nisi excepteur aute minim velit quis. Pariatur ad elit esse non sit duis nisi culpa ad voluptate velit laborum sit ad. Consequat veniam veniam deserunt pariatur aute culpa irure sint non anim cillum do reprehenderit magna. Dolore consequat occaecat voluptate aliqua id nulla voluptate. Ad non deserunt incididunt labore mollit nostrud officia ipsum in ut culpa qui.</p>"
+        }
+    },
+    {
+        "component": "message",
+        "props": {
+            "header": "Esse laboris sit proident magna duis sint",
+            "body": "<p>Voluptate amet consectetur occaecat laborum est non consectetur veniam. Labore id voluptate Lorem consequat. Elit elit in amet in cupidatat amet excepteur in dolore est pariatur laboris amet sit. Culpa dolor excepteur tempor reprehenderit enim cillum proident proident laboris labore occaecat. Qui et nulla sunt commodo sit nostrud enim adipisicing consequat tempor culpa excepteur. Duis qui minim cupidatat id tempor voluptate proident qui.</p>"
+        }
+    },
+    {
+        "component": "content",
+        "props": {
+            "body": "<p>Velit ad aliquip est adipisicing nulla pariatur. Sint proident nulla et deserunt nulla et. Consectetur incididunt duis non non commodo commodo ex ut. Consequat nostrud id amet do esse id sunt duis. Nostrud aliquip cillum ad fugiat mollit nisi deserunt magna id occaecat.</p>"
+        }
+    }
+]
