@@ -1,0 +1,26 @@
+
+// Fonts
+@import url('https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.container {
+    max-width: 600px;
+    padding: 100px 0;
+}
+
+.content,
+.card,
+.message {
+    margin-bottom: 30px;
+}
+
+.message {
+    &:not(.is-open) {
+        display: none;
+    }
+}
