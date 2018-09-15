@@ -17,6 +17,9 @@ window.Vue = require('vue');
 
 Vue.component('component-resolver', require('./resolver/ComponentResolver.vue'));
 
+import Meta from 'vue-meta'
+Vue.use(Meta);
+
 const app = new Vue({
     el: '#app'
 });
