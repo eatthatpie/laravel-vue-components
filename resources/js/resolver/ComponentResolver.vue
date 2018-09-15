@@ -1,9 +1,15 @@
 <template>
     <div id="component-resolver">
+        <div class="content">
+            <h1>
+                Page: {{ page.name }}
+            </h1>
+        </div>
+
         <component 
-            v-for="(item, index) in page" 
+            v-for="(item, index) in pageStructure" 
             :key="index" 
-            :is="components[item.component]" 
+            :is="components[item.codename]" 
             :data="item.props" 
         />
     </div>
@@ -16,6 +22,11 @@ import MessageComponentMapper from './../mappers/MessageComponentMapper'
 import axios from 'axios'
 
 export default {
+    metaInfo () {
+        return {
+            title: this.page.name + ' @ Laravel Vue Components'
+        }
+    },
     components: {
         CardComponentMapper, ContentComponentMapper, MessageComponentMapper
     },
@@ -26,12 +37,20 @@ export default {
                 'content': ContentComponentMapper,
                 'message': MessageComponentMapper
             },
-            page: []
+            pageId: 0,
+            page: {},
+            pageStructure: []
         }
     },
     mounted () {
-        axios.get('/data/page.json').then(response => {
-            this.page = response.data
+        this.pageId = Math.ceil(Math.random() * 10)
+
+        axios.get('/api/pages/' + this.pageId).then(response => {
+            this.page = response.data.data
+        })
+
+        axios.get('/api/pages/' + this.pageId + '/components').then(response => {
+            this.pageStructure = response.data.data
         })
     }
 }

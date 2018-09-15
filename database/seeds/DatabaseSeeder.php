@@ -11,6 +11,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+        DB::table('components')->truncate();
+        DB::table('pages')->truncate();
+        DB::table('props')->truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+        
+        $this->call([
+            PagesTableSeeder::class,
+            ComponentsSeeder::class,
+            PropsSeeder::class
+        ]);
     }
 }
