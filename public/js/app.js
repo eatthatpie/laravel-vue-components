@@ -13994,7 +13994,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(14);
-module.exports = __webpack_require__(61);
+module.exports = __webpack_require__(62);
 
 
 /***/ }),
@@ -14003,7 +14003,7 @@ module.exports = __webpack_require__(61);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_meta__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_meta__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_meta___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_meta__);
 
 /**
@@ -47412,6 +47412,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         __WEBPACK_IMPORTED_MODULE_3_axios___default.a.get('/api/pages/' + this.pageId + '/components').then(function (response) {
             _this.pageStructure = response.data.data;
         });
+    },
+
+    methods: {
+        getComponentByCodename: function getComponentByCodename(codename) {
+            console.log("yeah");
+            if (this.components.hasOwnProperty(codename)) {
+                return this.components[codename];
+            }
+
+            return null;
+        }
     }
 });
 
@@ -48052,7 +48063,7 @@ var render = function() {
       ]),
       _vm._v(" "),
       _vm._l(_vm.pageStructure, function(item, index) {
-        return _c(_vm.components[item.codename], {
+        return _c(_vm.getComponentByCodename(item.codename), {
           key: index,
           tag: "component",
           attrs: { data: item.props }
@@ -48074,16 +48085,6 @@ if (false) {
 
 /***/ }),
 /* 61 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 62 */,
-/* 63 */,
-/* 64 */,
-/* 65 */,
-/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -49226,6 +49227,12 @@ return VueMeta;
 
 })));
 
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
