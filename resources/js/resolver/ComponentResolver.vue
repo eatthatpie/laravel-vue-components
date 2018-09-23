@@ -9,7 +9,7 @@
         <component 
             v-for="(item, index) in pageStructure" 
             :key="index" 
-            :is="components[item.codename]" 
+            :is="getComponentByCodename(item.codename)"
             :data="item.props" 
         />
     </div>
@@ -52,6 +52,15 @@ export default {
         axios.get('/api/pages/' + this.pageId + '/components').then(response => {
             this.pageStructure = response.data.data
         })
+    },
+    methods: {
+        getComponentByCodename (codename) {
+            if (this.components.hasOwnProperty(codename)) {
+                return this.components[codename]
+            }
+
+            return null
+        }
     }
 }
 </script>
